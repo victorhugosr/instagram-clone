@@ -1,0 +1,208 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-branco);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 70px;
+    padding: 30px 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+/* LOGO */
+
+nav .logo img {
+    width: 100%;
+    max-width: 30px;
+}
+
+/* OPÇÕES */
+
+nav .options {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 80px 0;
+}
+
+nav .options button {
+    position: relative;
+    background-color: var(--cor-branco);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    margin: 0 0 10px 0;
+    transition: all 0.3s;
+}
+
+nav .options button:hover {
+    background-color: var(--cor-cinza-claro);
+}
+
+nav .options button img {
+    width: 100%;
+    max-width: 25px;
+    transition: all 0.3s;
+}
+
+nav .options button:hover img {
+    transform: scale(1.05);
+}
+
+nav .options button.perfil {
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+nav .options button.perfil:hover {
+    background-color: var(--cor-branco);
+}
+
+nav .options button.perfil img {
+    border-radius: 50%;
+}
+
+nav .options button .name {
+    background-color: var(--cor-cinza-claro);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    pointer-events: none;
+    width: max-content;
+    transition: all 0.3s;
+}
+
+nav .options button:hover .name {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+nav .options button .name p {
+    font-family: var(--fonte);
+    font-size: 0.8rem;
+    color: var(--cor-preto);
+}
+
+/* MENU */
+
+nav .menu button {
+    position: relative;
+    background-color: var(--cor-branco);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+nav .menu button:hover {
+    background-color: var(--cor-cinza-claro);
+}
+
+nav .menu button:hover img {
+    transform: scale(1.05);
+}
+
+nav .menu button img {
+    width: 100%;
+    max-width: 25px;
+    transform: all 0.3s;
+}
+
+nav .menu button .name {
+    background-color: var(--cor-cinza-claro);
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    pointer-events: none;
+    width: max-content;
+    transition: all 0.3s;
+}
+
+nav .menu button .nome p {
+    font-family: var(--fonte);
+    font-size: 0.8rem;
+    color: var(--cor-preto);
+}
+
+nav .menu button:hover .name {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 900px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        top: auto;
+        left: 0;
+        min-height: 50px;
+        width: 100%;
+        padding: 0 20px;
+        border-right: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    /* LOGO */
+    
+    nav .logo {
+        display: none;
+    }
+    
+    /* OPÇÕES */
+    
+    nav .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+    }
+    
+    nav .options button.mobile {
+        display: none;
+    }
+ 
+    nav .options button {
+        padding: 0;
+        margin: 0;
+    }
+ 
+    nav .options button.perfil {
+        margin: 0;
+    }
+    
+    nav .options button img {
+        width: 100%;
+        max-width: 25px;
+        transition: all 0.3s;
+    }
+    
+    nav .options button .name {
+        display: none;
+    }
+    
+    /* MENU */
+    
+    nav .menu {
+        display: none;
+    }
+}
